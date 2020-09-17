@@ -49,4 +49,30 @@ const team = {
   get games() {
     return this._games;
   },
+  addPlayer(firstName, lastName, age) {
+    const player = {
+      firstName,
+      lastName,
+      age,
+    };
+    return this._players.push(player);
+  },
+  addGame(opponent, teamPoints, opponentPoints) {
+    const game = {
+      opponent,
+      teamPoints,
+      opponentPoints,
+    };
+    return this._games.push(game);
+  },
 };
+team.addPlayer('Steph', 'Curry', 28);
+team.addPlayer('Lisa', 'Leslie', 44);
+team.addPlayer('Bugs', 'Bunny', 76);
+
+team.addGame('Egypt', 30, 20);
+team.addGame('Iraq', 40, 10);
+team.addGame('Kwait', 20, 20);
+
+// console.log(team._players);
+// console.log(team._games);
